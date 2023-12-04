@@ -1,0 +1,241 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    height: 100vh;
+
+    background-color: rgb(34, 34, 34);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 428px) {
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+}
+
+.container-inicio{
+    width: 80vw;
+    height: 50vh;
+
+    display: flex;
+    background-color: rgb(27, 9, 27);
+    border-radius: 10px;
+
+    @media (max-width: 428px){
+        background-color: rgb(34, 34, 34);
+        height: 100vh;
+        flex-direction: column;
+    }
+    
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 50vh;
+    width: 50vw;
+    flex-direction: row;
+
+    @media (max-width: 428px){
+        flex-direction: column;
+        width: 80vw;
+    }
+}
+
+.nome-profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+.info h1{
+    margin-top: 10px;
+    color: transparent;
+
+    font-size: 2.5rem;
+
+    animation: written_text .5s ease forwards;
+
+    @media (max-width: 428px){
+        font-size: 20px;
+    }
+}
+
+.info h1:nth-child(1){
+    animation-delay: 1s;
+}
+
+.info h1:nth-child(3){
+    animation: written_name .5s ease forwards;
+    animation-delay: 1.5s;
+
+    background-color: red;
+}
+
+
+@keyframes written_text {
+    100%{
+        color: white;
+    }
+}
+
+@keyframes written_name{
+    100%{
+        color: black;
+    }
+}
+
+.profile {
+   border-top-right-radius: 25%;
+   border-bottom-left-radius: 25%;
+   border-bottom-right-radius: 25%;
+   border-top-left-radius: 25%;
+
+    margin-right: 20px;
+    width: 250px;
+    height: 250px;
+
+    transition: all 3s ease;
+
+    @media (max-width: 428px) {
+        height: 110px;
+        width: 150px;
+        margin: 0;
+     }
+}
+
+.profile:hover{
+    transform: scale(0.8);
+    @media (max-width: 428px){
+        transform: scale(0.5);
+    }
+}
+
+.rede img{
+    width: 50px;
+    margin: 15px;
+
+    transition: all ease 1s;
+    @media (max-width: 428px){
+        width: 30px;
+    }
+}
+
+.rede img:hover{
+    transform: scale(1.2);
+}
+
+.rede{
+    cursor: pointer;
+
+    @media (max-width: 428px) {
+        margin-top: 25px;
+     }
+}
+
+// SOBRE 
+
+.about-profile{
+   
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 25vh;
+    width: 50vw;
+
+    @media (max-width: 428px){
+        width: 80vw;
+        height: 15vh;
+    }
+}
+
+.about-profile h2{
+    color: transparent;
+    position: relative;
+    bottom: 50px;
+
+    animation: written_about .5s ease forwards;
+    animation-delay: 10s;
+
+    @media (max-width: 428px){
+        font-size: 0px;
+    }
+}
+
+.about-profile p{
+    @media (max-width: 428px){
+        text-align: center;
+    }
+}
+
+@keyframes written_about{
+    100%{
+        color: white;
+    }
+}
+
+//TECNOLOGIAS 
+
+.tec-profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 25vh;
+
+    
+    
+}
+
+.tec-profile h2{
+    text-align: center;
+
+    color: white;
+}
+
+.techs{
+    width: 25vw;
+    display: flex;
+    justify-content: space-evenly;
+
+    border: 5px solid black;
+    border-radius: 10px;
+
+    background-image: linear-gradient(to right, orange, blue, yellow,white);
+        @media (max-width: 428px){
+           background-image: none; 
+           border: none;
+        }
+}
+
+.techs img{
+    cursor: pointer;
+    width: 60px;
+    transition: ease all 2s;
+
+    animation: up_down 2s forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes up_down{
+    0%{
+        transform: scale(0);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
